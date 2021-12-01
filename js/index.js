@@ -42,6 +42,21 @@ console.log(nameLowercaseHacker2);
 
 // 3.3
 
-const test = hacker1[1] < hacker2[1];
-console.log(test);
+let j = 0;
+let longueurDuNomLePlusCourt = hacker1.length < hacker2.length ? hacker1.length : hacker2.length;
+
+while (j < longueurDuNomLePlusCourt) { 
+    if (hacker1 === hacker2) {
+        console.log("What?! You both have the same name?");
+    } else {
+        if (hacker1[j] < hacker2[j]) {
+            console.log('The driver\'s name goes first.');
+            break;
+        } else if (hacker1[j] > hacker2[j]) {
+            console.log("Yo, the navigator goes first definitevely.");
+            break;
+        }      
+    }
+ j++
+}
 
